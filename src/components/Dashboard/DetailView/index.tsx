@@ -1,14 +1,11 @@
 import Box from "@mui/material/Box";
 import Paper from "@mui/material/Paper";
-import AccordionDetails from "@mui/material/AccordionDetails";
-import AccordionSummary from "@mui/material/AccordionSummary";
-import Accordion from "@mui/material/Accordion";
 import Typography from "@mui/material/Typography";
 
 import GpsFixedIcon from "@mui/icons-material/GpsFixed";
+import ChevronRightIcon from '@mui/icons-material/ChevronRight';
 import LunchDiningIcon from "@mui/icons-material/LunchDining";
 import BrunchDiningIcon from "@mui/icons-material/BrunchDining";
-import ExpandMoreIcon from "@mui/icons-material/ExpandMore";
 
 const detailViewList = [
   {
@@ -30,7 +27,7 @@ const detailViewList = [
 
 export default function DetailView() {
   return (
-    <Paper elevation={3} sx={{ mt: 2, padding: 2 }}>
+    <Paper elevation={3} sx={{ mt: 2, padding: 2, alignItems: "center", display: "grid" }}>
       {detailViewList.map((item, index) => (
         <Box
           key={index}
@@ -41,43 +38,28 @@ export default function DetailView() {
           }}
           className="detailView"
         >
-          <Accordion>
-            <AccordionSummary
-              expandIcon={<ExpandMoreIcon />}
-              aria-controls="panel1-content"
-              id="panel1-header"
-            >
-              <Box
-                sx={{
-                  display: "flex",
-                  alignItems: "center",
-                  [`& .MuiSvgIcon-root`]: {
-                    borderRadius: "50px",
-                    padding: "12px",
-                    backgroundColor: item.color,
-                    marginRight: "20px",
-                  },
-                }}
-                className="itemIcon"
-              >
-                <div style={{}} className="itemIcon">
-                  {item.icon}
-                </div>
-                <Typography variant="h5" sx={{ marginLeft: 1 }}>
-                  {item.name}
-                </Typography>
-              </Box>
-            </AccordionSummary>
-
-            <AccordionDetails>
-              <Typography variant="body1" sx={{ mt: 1 }}>
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-                Suspendisse malesuada lacus ex, sit amet blandit leo lobortis
-                eget.
-              </Typography>
-            </AccordionDetails>
-          </Accordion>
-        </Box>
+          <Box
+            sx={{
+              display: "flex",
+              alignItems: "center",
+              [`& .MuiSvgIcon-root`]: {
+                borderRadius: "50px",
+                padding: "12px",
+                backgroundColor: item.color,
+                marginRight: "20px",
+              },
+            }}
+            className="itemIcon"
+          >
+            <div className="itemIcon">
+              {item.icon}
+            </div>
+            <Typography variant="h5" sx={{ marginLeft: 1 }}>
+              {item.name}
+            </Typography>
+          </Box>
+          <ChevronRightIcon cursor={"pointer"} />
+                </Box>
       ))}
     </Paper>
   );
