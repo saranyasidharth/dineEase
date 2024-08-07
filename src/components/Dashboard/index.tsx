@@ -43,7 +43,7 @@ export default function Dashboard() {
   ];
   return (
     <>
-      <div style={{ display: "grid", gap: "20px" }} className="gridItem">
+      <div className="gridItem">
         {summaryData.map((data, index) => (
             <SummaryCard data={data} key={index} />
         ))}

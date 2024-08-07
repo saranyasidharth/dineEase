@@ -18,7 +18,7 @@ const SidebarWrapper = styled("div")(({ theme }) => ({
   "& .MuiDrawer-paper": {
     width: drawerWidth,
     boxSizing: "border-box",
-    overflow: "hidden", // Prevents scrollbar
+    overflow: "hidden",
   },
 }));
 

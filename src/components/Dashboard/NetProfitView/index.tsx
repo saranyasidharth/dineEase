@@ -11,36 +11,35 @@ export default function NetProfitView() {
   return (
     <Paper
       elevation={3}
-      style={{ display: "grid", gridTemplateColumns: "2fr 1fr", gap: "20px" }}
+      style={{ gridTemplateColumns: "2fr 1fr" }}
+      className="gridItem"
     >
       <CardContent sx={{ justifyContent: "left" }}>
-        <div>
-          <Typography variant="h5" gutterBottom>
-            Net Profit
-          </Typography>
-          <Typography
-            variant="h3"
-            component="div"
-            sx={{
-              mb: 1,
-              fontWeight: "bold",
-            }}
-          >
-            $6759.23
-          </Typography>
-          <Typography
-            sx={{
-              mb: 1.5,
-              fontSize: 16,
-              alignItems: "center",
-              display: "flex",
-            }}
-            color={"green"}
-          >
-            <ArrowDropUpIcon />
-            3%
-          </Typography>
-        </div>
+        <Typography variant="h5" gutterBottom>
+          Net Profit
+        </Typography>
+        <Typography
+          variant="h3"
+          component="div"
+          sx={{
+            mb: 1,
+            fontWeight: "bold",
+          }}
+        >
+          $6759.23
+        </Typography>
+        <Typography
+          sx={{
+            mb: 1.5,
+            fontSize: 16,
+            alignItems: "center",
+            display: "flex",
+          }}
+          color={"green"}
+        >
+          <ArrowDropUpIcon />
+          3%
+        </Typography>
       </CardContent>
       <div
         style={{

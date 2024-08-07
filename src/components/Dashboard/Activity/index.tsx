@@ -15,7 +15,6 @@ export default function Activity() {
         backgroundColor: "#282c34",
         alignItems: "left",
       }}
-      className="gridItem"
     >
       <Typography variant="h4" sx={{ float: "left", padding: " 10px" }}>
         Activity
@@ -51,7 +50,7 @@ export default function Activity() {
         borderRadius={50}
         sx={{
           [`.${axisClasses.root}`]: {
-       [`.${axisClasses.tick}, .${axisClasses.line}`]: {
+            [`.${axisClasses.tick}, .${axisClasses.line}`]: {
               stroke: "#acacbb",
             },
             [`.${axisClasses.tickLabel}`]: {
