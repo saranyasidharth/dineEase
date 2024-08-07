@@ -1,38 +1,71 @@
-.App {
-  text-align: center;
+body {
+  background-color: #121417;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  justify-content: center;
+.dashboard {
+  padding: 16px;
+  background-color: #121417;
+  display: grid;
+  grid-template-columns: 1fr;
+  gap: 20px;
   font-size: calc(10px + 2vmin);
   color: white;
+  padding-left: 70px;
+  margin-top: 70px;
+}
+.gridItem {
+  grid-template-columns: 2fr 2fr;
 }
 
-.App-link {
-  color: #61dafb;
+@media screen and (min-width: 576px) {
+  .dashboard {
+    grid-template-columns: 2fr 1fr;
+  }
+  .gridItem {
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+  }
+}
+.icons {
+  color: #acacbb !important;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.detailView {
+  display: flex;
+  padding: 15px;
+}
+
+.detailView .MuiSvgIcon-root {
+  border-radius: 25px;
+  padding: 5px;
+  background-color: #47484d;
+  margin-right: 20px;
+  color: #8f8f92;
+}
+
+
+.detailView .MuiTypography-root {
+  align-content: center;
+}
+
+.dashboard .MuiTableCell-root {
+  color: #ffffff;
+  border-bottom: 1px solid #282830;
+}
+
+.dashboard .MuiTableRow-root {
+  background-color: #202028;
+}
+
+.dashboard .MuiTypography-h2 {
+  color: #ffffff;
+  margin-bottom: 20px;
+}
+
+.dashboard .MuiPaper-root {
+  background-color: #202028;
+  box-shadow: none;
+}
+
+.dashboard .MuiTableContainer-root {
+  margin-top: 20px;
 }
